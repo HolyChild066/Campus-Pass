@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { StudentProfile } from '../types/student';
 import { StatusBadge } from './StatusBadge';
 
@@ -11,17 +11,6 @@ interface StudentCardProps {
 export const StudentCard: React.FC<StudentCardProps> = ({ student, isActive }) => {
   return (
     <View style={styles.card}>
-      <View style={styles.header}>
-        <View style={styles.identityRow}>
-          <Image source={{ uri: student.avatarUrl }} style={styles.avatar} />
-          <View style={styles.identityDetails}>
-            <Text style={styles.institution}>DOrSU</Text>
-            <Text style={styles.cardLabel}>DIGITAL CAMPUS PASS</Text>
-          </View>
-        </View>
-        <Text style={styles.passMark}>PASS</Text>
-      </View>
-
       <View style={styles.body}>
         <Text style={styles.name}>{student.name}</Text>
 
@@ -57,67 +46,21 @@ const styles = StyleSheet.create({
   card: {
     width: '100%',
     maxWidth: 520,
-    overflow: 'hidden',
     backgroundColor: '#ffffff',
-    borderRadius: 18,
+    borderRadius: 4,
     borderWidth: 1,
-    borderColor: '#e5def4',
-    shadowColor: '#251a3d',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.1,
-    shadowRadius: 12,
-    elevation: 4,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#7653c8',
-  },
-  identityRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  avatar: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    borderWidth: 3,
-    borderColor: '#ffffff',
-  },
-  identityDetails: {
-    marginLeft: 12,
-    gap: 4,
-  },
-  institution: {
-    color: '#ffffff',
-    fontSize: 18,
-    fontWeight: '800',
-    letterSpacing: 1,
-  },
-  cardLabel: {
-    color: '#eee8ff',
-    fontSize: 10,
-    fontWeight: '700',
-    letterSpacing: 1,
-  },
-  passMark: {
-    color: '#ffffff',
-    fontSize: 12,
-    fontWeight: '700',
-    letterSpacing: 1,
+    borderColor: '#cccccc',
   },
   body: {
     flexDirection: 'column',
     alignItems: 'stretch',
-    gap: 12,
-    padding: 20,
+    gap: 10,
+    padding: 16,
   },
   name: {
-    color: '#251a3d',
-    fontSize: 24,
-    fontWeight: '800',
+    color: '#222222',
+    fontSize: 20,
+    fontWeight: '600',
   },
   infoRow: {
     flexDirection: 'row',
@@ -132,20 +75,19 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   label: {
-    color: '#8a7d9f',
+    color: '#666666',
     fontSize: 10,
     fontWeight: '700',
-    letterSpacing: 0.8,
   },
   idNumber: {
-    color: '#7653c8',
-    fontSize: 18,
-    fontWeight: '800',
+    color: '#222222',
+    fontSize: 16,
+    fontWeight: '600',
   },
   value: {
-    color: '#3e334f',
+    color: '#333333',
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: '400',
   },
   statusRow: {
     flexDirection: 'row',
@@ -154,8 +96,8 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   campus: {
-    color: '#3e334f',
+    color: '#333333',
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: '400',
   },
 });

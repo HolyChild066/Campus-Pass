@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#fff',
+    backgroundColor: '#f4f6f8',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 12,
@@ -150,8 +150,8 @@ const styles = StyleSheet.create({
   passContent: {
     width: '100%',
     flexDirection: 'column',
-    padding: 16,
-    gap: 24,
+    padding: 10,
+    gap: 16,
   },
   passScroll: {
     alignSelf: 'stretch',
@@ -173,19 +173,19 @@ const styles = StyleSheet.create({
   section: {
     flexDirection: 'column',
     alignItems: 'stretch',
-    gap: 12,
+    gap: 8,
   },
   sectionTitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: '700',
-    color: '#251a3d',
+    color: '#222222',
   },
   statusPanel: {
     flexDirection: 'column',
     alignItems: 'center',
     gap: 4,
-    paddingVertical: 16,
-    borderRadius: 12,
+    paddingVertical: 12,
+    borderRadius: 8,
   },
   activePanel: {
     backgroundColor: '#e8f7ee',
@@ -211,18 +211,22 @@ const styles = StyleSheet.create({
   },
   controlButton: {
     alignItems: 'center',
-    paddingVertical: 14,
-    borderRadius: 12,
+    paddingVertical: 11,
+    borderRadius: 8,
   },
   suspendButton: {
-    backgroundColor: '#b23a48',
+    backgroundColor: '#ffe4df',
+    borderWidth: 1,
+    borderColor: '#f1b6aa',
   },
   reactivateButton: {
-    backgroundColor: '#218739',
+    backgroundColor: '#f5f7f9',
+    borderWidth: 1,
+    borderColor: '#d6dde4',
   },
   controlButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
+    color: '#91402e',
+    fontSize: 12,
     fontWeight: '600',
   },
   backButton: {
